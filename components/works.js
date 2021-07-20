@@ -18,9 +18,8 @@ export default function Works() {
                     imgSrc={trypImageSrc}
                     url="https://www.tryp.com/"
                 >
-                    Started working as core frontend developer for tryp,
-                    designed and built tryp.com frontend, and currently
-                    maintaining it.
+                    Started working in a danish based startup - tryp, as their
+                    core frontend developer. Helped designed & built tryp.com.
                 </Card>
                 <Card
                     isWork
