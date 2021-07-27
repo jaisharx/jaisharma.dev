@@ -11,7 +11,6 @@ export default function Works() {
             <Container>
                 <Card
                     isWork
-                    id="webapp"
                     count="01"
                     title="tryp.com"
                     badgeText="Recent"
@@ -24,7 +23,6 @@ export default function Works() {
                 </Card>
                 <Card
                     isWork
-                    id="website"
                     count="02"
                     title="Open source projects"
                     imgSrc={yellowjobsImageSrc}
