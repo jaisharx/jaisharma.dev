@@ -2,9 +2,9 @@ import { Box } from '@chakra-ui/react';
 import Card from './card';
 import Container from './container';
 
-import devtoImageSrc from 'public/devto.png';
-import nextjsImageSrc from 'public/nextjs.png';
-import designwizImageSrc from 'public/designwiz.png';
+import devtoImageSrc from 'public/static/devto.png';
+import nextjsImageSrc from 'public/static/nextjs.png';
+import designwizImageSrc from 'public/static/designwiz.png';
 
 export default function Projects() {
     return (

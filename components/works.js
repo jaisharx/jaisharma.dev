@@ -2,8 +2,8 @@ import { Box } from '@chakra-ui/react';
 import Card from './card';
 import Container from './container';
 
-import trypImageSrc from 'public/tryp.png';
-import yellowjobsImageSrc from 'public/yellowjobs.png';
+import trypImageSrc from 'public/static/tryp.png';
+import yellowjobsImageSrc from 'public/static/yellowjobs.png';
 
 export default function Works() {
     return (

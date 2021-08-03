@@ -9,7 +9,7 @@ import DevToIcon from './icons/devto-icon.svg';
 import MediumIcon from './icons/medium-icon.svg';
 import DribbleIcon from './icons/dribble-icon.svg';
 
-import profileImageSrc from 'public/profile.jpg';
+import profileImageSrc from 'public/static/profile.jpg';
 
 const SocialLink = styled(Link)`
     display: flex;
