@@ -148,6 +148,7 @@ export default function Header() {
                     <LeftColumn />
                     <Box display={{ base: 'none', lg: 'block' }}>
                         <NextImage
+                            priority
                             alt="My Image"
                             placeholder="blur"
                             src={profileImageSrc}
