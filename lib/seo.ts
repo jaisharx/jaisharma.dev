@@ -1,6 +1,6 @@
 const content = {
-    title: 'Jai Sharma | Portfolio',
-    desc: 'jaisharma.dev is my small corner of the web showcasing projects I’ve been building. I love building modern and clean UI, with performance in mind.',
+    title: 'React, Next.js, and Front-End expert - Jai Sharma',
+    desc: 'jaisharma.dev is my small corner of the web showcasing projects I’ve been working on. I\'m a fan of building modern and clean UI, with performance in mind.',
 };
 
 export default content;
