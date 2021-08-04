@@ -16,14 +16,14 @@ export default function NextHead({ title, desc }) {
             <meta property="og:url" content="https://jaisharma.dev/" />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={desc} />
-            <meta property="og:image" content="http://jaisharma.dev/homepage.png" />
+            <meta property="og:image" content="http://jaisharma.dev/preview.png" />
 
             {/* <!-- twitter --> */}
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content="https://jaisharma.dev/" />
             <meta property="twitter:title" content={title} />
             <meta property="twitter:description" content={desc} />
-            <meta property="twitter:image" content="http://jaisharma.dev/homepage.png"></meta>
+            <meta property="twitter:image" content="http://jaisharma.dev/preview.png"></meta>
         </Head>
     );
 }
