@@ -3,12 +3,11 @@ import Container from './container';
 
 export default function Footer() {
     return (
-        <Box as="footer" id="contact" my={{ base: 20, md: 80 }}>
-            <Container>
-                <Heading
-                    fontSize={{ base: '24px', md: '62px', lg: '92px' }}
-                    color="white"
-                    textShadow=" 1px 1px 0px #161919,
+        <Box as={Container} type="footer" my={{ base: 20, md: 80 }}>
+            <Heading
+                fontSize={{ base: '24px', md: '62px', lg: '92px' }}
+                color="white"
+                textShadow=" 1px 1px 0px #161919,
                     2px 2px 0px #161919,
                     3px 3px 0px #161919,
                     4px 4px 0px #161919,
@@ -20,17 +19,16 @@ export default function Footer() {
                     10px 10px 0px #161919,
                     11px 11px 0px #161919,
                     12px 12px 0px #161919;"
+            >
+                Like what you see? <br /> Reach out to me at <br />
+                <Link
+                    _hover={{ borderBottom: '12px solid #2DFFC0' }}
+                    _focus={{ boxShadow: 'none' }}
+                    href="mailto:sendtojsharma@gmail.com"
                 >
-                    Like what you see? <br /> Reach out to me at <br />
-                    <Link
-                        _hover={{ borderBottom: '12px solid #2DFFC0' }}
-                        _focus={{ boxShadow: 'none' }}
-                        href="mailto:sendtojsharma@gmail.com"
-                    >
-                        sendtojsharma@gmail.com
-                    </Link>
-                </Heading>
-            </Container>
+                    sendtojsharma@gmail.com
+                </Link>
+            </Heading>
         </Box>
     );
 }
