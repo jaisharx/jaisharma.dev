@@ -69,18 +69,12 @@ export default function Card({
                 )}
             </HStack>
             <Box borderRadius="md" overflow="hidden" mt={{ base: 4, lg: 12 }}>
-                <Link
-                    href={url}
-                    isExternal
-                    _focus={{ boxShadow: '0 0 0 3px #2dffc0' }}
-                >
+                <Link href={url} isExternal>
                     <NextImage
                         alt={title}
                         src={imgSrc}
-                        width="1280"
-                        height="800"
+                        layout="responsive"
                         placeholder="blur"
-                        objectFit="cover"
                     />
                 </Link>
             </Box>
