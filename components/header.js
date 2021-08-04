@@ -77,7 +77,9 @@ const FancyUnderline = styled(Link)`
 function LeftColumn() {
     return (
         <Box as="main" color="white">
-            <Text fontSize="4xl">JS</Text>
+            <Text fontSize="4xl" lineHeight="1">
+                JS
+            </Text>
             <Text
                 fontSize={{ base: '2xl', lg: '4xl' }}
                 fontWeight="light"
@@ -145,9 +147,15 @@ export default function Header() {
         <Box as={Container} type="header" mt={20}>
             <Grid templateColumns={{ md: '1fr', lg: '1.4fr 1fr' }}>
                 <LeftColumn />
-                <Box display={{ base: 'none', lg: 'block' }}>
+                <Box
+                    pos="relative"
+                    borderRadius="sm"
+                    overflow="hidden"
+                    display={{ base: 'none', lg: 'block' }}
+                >
                     <NextImage
                         priority
+                        layout="responsive"
                         placeholder="blur"
                         src={profileImageSrc}
                         alt="My Profile Image"
