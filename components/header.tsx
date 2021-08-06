@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 import NextImage from 'next/image';
 import Container from './container';
 
-import GmailIcon from './icons/gmail-icon.svg';
-import GithubIcon from './icons/github-icon.svg';
-import DevToIcon from './icons/devto-icon.svg';
-import MediumIcon from './icons/medium-icon.svg';
-import DribbleIcon from './icons/dribble-icon.svg';
+import GmailIcon from './icons/gmail-icon';
+import GithubIcon from './icons/github-icon';
+import DevToIcon from './icons/devto-icon';
+import MediumIcon from './icons/medium-icon';
+import DribbleIcon from './icons/dribble-icon';
 
 import profileImageSrc from 'public/static/profile.jpg';
 
