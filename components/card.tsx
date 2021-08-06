@@ -19,6 +19,18 @@ const BulletDot = styled(Text)`
     color: #2dffc0;
 `;
 
+type CardProps = {
+    id?;
+    count;
+    title;
+    imgSrc;
+    url;
+    badgeText?;
+    isWork?;
+    githubUrl?;
+    children;
+};
+
 export default function Card({
     id,
     count,
@@ -29,7 +41,7 @@ export default function Card({
     isWork,
     githubUrl,
     children,
-}) {
+}: CardProps) {
     return (
         <Box id={id} color="white" mt={28} as="article">
             <Text fontSize={{ base: '5xl', lg: '8xl' }} fontFamily="Monoton">
