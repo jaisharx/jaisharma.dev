@@ -1,4 +1,6 @@
-import { GA_TRACKING_ID } from './gtag';
+import Script from 'next/script';
+
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 const AnalyticsLib = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
 const AnalyticsScript = {
@@ -15,8 +17,8 @@ const AnalyticsScript = {
 export default function Analytics() {
     return (
         <>
-            <script async src={AnalyticsLib} />
-            <script dangerouslySetInnerHTML={AnalyticsScript} />
+            <Script src={AnalyticsLib} />
+            <Script dangerouslySetInnerHTML={AnalyticsScript} />
         </>
     );
 }
