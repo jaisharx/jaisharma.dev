@@ -98,4 +98,4 @@ Project Link: [https://github.com/jaisharx/jaisharma.dev](https://github.com/jai
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[product-screenshot]: ./public/homepage.png
+[product-screenshot]: ./public/preview.png
