@@ -1,22 +1,22 @@
-import { Global, css } from '@emotion/react';
+import { Global, css } from '@emotion/react'
 
 const CSS = css`
-    html {
-        scroll-behavior: smooth;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
 
-    body {
-        overflow-x: hidden;
-        background-color: #222;
-    }
+  body {
+    overflow-x: hidden;
+    background-color: #222;
+  }
 
-    ::selection {
-        background: #2dffc0c5;
-    }
-`;
+  ::selection {
+    background: #2dffc0c5;
+  }
+`
 
 function GlobalCSS() {
-    return <Global styles={CSS} />;
+  return <Global styles={CSS} />
 }
 
-export default GlobalCSS;
+export default GlobalCSS
