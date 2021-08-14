@@ -1,4 +1,6 @@
 import { Box, Text, Heading, HStack, Link, Badge } from '@chakra-ui/react'
+import { ReactNode } from 'react'
+
 import NextImage from 'next/image'
 import styled from '@emotion/styled'
 import '@fontsource/monoton'
@@ -20,15 +22,15 @@ const BulletDot = styled(Text)`
 `
 
 type CardProps = {
-  id?
-  count
-  title
-  imgSrc
-  url
-  badgeText?
-  isWork?
-  githubUrl?
-  children
+  id?: string
+  count: string
+  title: string
+  imgSrc: StaticImageData
+  url: string
+  badgeText?: string
+  isWork?: boolean
+  githubUrl?: string
+  children: ReactNode
 }
 
 export default function Card({
