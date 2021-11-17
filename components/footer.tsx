@@ -22,9 +22,10 @@ export default function Footer() {
       >
         Like what you see? <br /> Reach out to me at <br />
         <Link
-          _hover={{ borderBottom: '12px solid #2DFFC0' }}
-          _focus={{ boxShadow: 'none' }}
+          transition=".2s all ease"
           href="mailto:sendtojsharma@gmail.com"
+          _focus={{ boxShadow: 'none' }}
+          _hover={{ borderBottom: '12px solid #2DFFC0' }}
         >
           sendtojsharma@gmail.com
         </Link>
