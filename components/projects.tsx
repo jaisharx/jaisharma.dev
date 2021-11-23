@@ -14,7 +14,6 @@ export default function Projects() {
         count="01"
         title="Dev.to Clone"
         imgSrc={devtoImageSrc}
-        badgeText="Recent"
         url="https://dev-to-pied.vercel.app/"
         githubUrl="https://github.com/jaisharx/dev.to"
       >
