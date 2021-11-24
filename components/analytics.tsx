@@ -17,8 +17,11 @@ const AnalyticsScript = {
 export default function Analytics() {
   return (
     <>
-      <Script src={AnalyticsLib} />
-      <Script dangerouslySetInnerHTML={AnalyticsScript} />
+      <Script strategy="afterInteractive" src={AnalyticsLib} />
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={AnalyticsScript}
+      />
     </>
   )
 }
