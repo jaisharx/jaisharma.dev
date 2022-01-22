@@ -12,12 +12,12 @@ export default function Works() {
         isWork
         count="01"
         title="tryp.com"
-        badgeText="Recent"
+        badgeText="6+ Months"
         imgSrc={trypImageSrc}
         url="https://www.tryp.com/"
       >
-        Joined as a core frontend developer in a danish based startup - Tryp.
-        Helped designed & built tryp.com from scratch.
+        Joined as a core FE engineer in a danish based startup in 2021, helping
+        revolutionize the travel industry.
       </Card>
       <Card
         isWork
