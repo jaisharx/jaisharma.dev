@@ -136,8 +136,8 @@ function LeftColumn() {
 
 export default function Header() {
   return (
-    <Box as={Container} type="header" mt={20}>
-      <Grid templateColumns={{ md: '1fr', lg: '1.4fr 1fr' }}>
+    <Box as={Container} type="header">
+      <Grid templateColumns={{ md: '1fr', lg: '1.4fr 1fr' }} mt={20}>
         <LeftColumn />
         <Box pos="relative" display={{ base: 'none', lg: 'block' }}>
           <NextImage

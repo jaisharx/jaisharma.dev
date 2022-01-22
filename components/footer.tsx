@@ -18,7 +18,7 @@ export default function Footer() {
   }
 
   return (
-    <Box as={Container} type="footer" my={{ base: 20, md: 80 }}>
+    <Box as={Container} type="footer" py={{ base: 20, md: 80 }}>
       <Heading
         color="white"
         fontSize={{ base: '26px', md: '62px', lg: '92px' }}
