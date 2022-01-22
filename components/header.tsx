@@ -100,7 +100,7 @@ function LeftColumn() {
         <FancyUnderline href="#webapp">webapps</FancyUnderline> made with ❤ of
         modern web technologies.
       </Text>
-      <HStack spacing={{ base: 3, lg: 9 }} mt={10}>
+      <HStack spacing={{ base: 5, lg: 9 }} mt={10}>
         <SocialLink
           isExternal
           aria-label="Gmail"
