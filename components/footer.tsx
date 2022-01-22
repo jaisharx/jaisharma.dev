@@ -1,5 +1,6 @@
 import { Box, Link, Heading, useClipboard, useToast } from '@chakra-ui/react'
 import Container from './container'
+import FleckedBox from './flecked-box'
 
 export default function Footer() {
   const DepthShadow =
@@ -18,22 +19,24 @@ export default function Footer() {
   }
 
   return (
-    <Box as={Container} type="footer" py={{ base: 20, md: 80 }}>
-      <Heading
-        color="white"
-        fontSize={{ base: '26px', md: '62px', lg: '92px' }}
-        textShadow={{ base: 'none', md: DepthShadow }}
-      >
-        Like what you see? <br /> Reach out to me at <br />
-        <Link
-          onClick={copyEmailToClipboard}
-          transition=".2s all ease"
-          _focus={{ boxShadow: 'none' }}
-          _hover={{ borderBottom: '12px solid #2DFFC0' }}
+    <FleckedBox>
+      <Box as={Container} type="footer" py={{ base: 20, md: 80 }}>
+        <Heading
+          color="white"
+          fontSize={{ base: '26px', md: '62px', lg: '92px' }}
+          textShadow={{ base: 'none', md: DepthShadow }}
         >
-          sendtojsharma@gmail.com
-        </Link>
-      </Heading>
-    </Box>
+          Like what you see? <br /> Reach out to me at <br />
+          <Link
+            onClick={copyEmailToClipboard}
+            transition=".2s all ease"
+            _focus={{ boxShadow: 'none' }}
+            _hover={{ borderBottom: '12px solid #2DFFC0' }}
+          >
+            sendtojsharma@gmail.com
+          </Link>
+        </Heading>
+      </Box>
+    </FleckedBox>
   )
 }

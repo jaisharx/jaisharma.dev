@@ -8,8 +8,8 @@ type AppProps = {
 }
 
 const FleckedContainer = styled(Box)`
-  --fleck-seed: 123447;
-  --fleck-count: 200;
+  --fleck-seed: 12347;
+  --fleck-count: 40;
   --fleck-size-base: 4px;
 
   --fleck-color-1: #fe9f00;
@@ -17,6 +17,10 @@ const FleckedContainer = styled(Box)`
   --fleck-color-3: #ffffff;
 
   background-image: paint(fleck);
+
+  @media (max-width: 60em) {
+    background-image: none;
+  }
 `
 
 export default function FleckedBox({ children }: AppProps) {
