@@ -7,7 +7,6 @@ import GmailIcon from './icons/gmail-icon'
 import GithubIcon from './icons/github-icon'
 import DevToIcon from './icons/devto-icon'
 import MediumIcon from './icons/medium-icon'
-import DribbleIcon from './icons/dribble-icon'
 
 import profileImageSrc from 'public/static/profile.jpg'
 
@@ -130,13 +129,6 @@ function LeftColumn() {
         >
           <MediumIcon />
         </SocialLink>
-        <SocialLink
-          isExternal
-          aria-label="Dribble"
-          href="https://dribbble.com/jaisharx"
-        >
-          <DribbleIcon />
-        </SocialLink>
       </HStack>
     </Box>
   )
@@ -147,12 +139,7 @@ export default function Header() {
     <Box as={Container} type="header" mt={20}>
       <Grid templateColumns={{ md: '1fr', lg: '1.4fr 1fr' }}>
         <LeftColumn />
-        <Box
-          pos="relative"
-          borderRadius="sm"
-          overflow="hidden"
-          display={{ base: 'none', lg: 'block' }}
-        >
+        <Box pos="relative" display={{ base: 'none', lg: 'block' }}>
           <NextImage
             priority
             layout="responsive"
