@@ -1,4 +1,4 @@
-import { Text, Box, Grid, HStack, Link } from '@chakra-ui/react'
+import { Text, Box, Grid, HStack, Link, ScaleFade } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import NextImage from 'next/image'
 import Container from './container'
@@ -137,18 +137,20 @@ function LeftColumn() {
 export default function Header() {
   return (
     <Box as={Container} type="header">
-      <Grid templateColumns={{ md: '1fr', lg: '1.4fr 1fr' }} mt={20}>
-        <LeftColumn />
-        <Box pos="relative" display={{ base: 'none', lg: 'block' }}>
-          <NextImage
-            priority
-            layout="responsive"
-            placeholder="blur"
-            src={profileImageSrc}
-            alt="My Profile Image"
-          />
-        </Box>
-      </Grid>
+      <ScaleFade in={true}>
+        <Grid templateColumns={{ md: '1fr', lg: '1.4fr 1fr' }} mt={20}>
+          <LeftColumn />
+          <Box pos="relative" display={{ base: 'none', lg: 'block' }}>
+            <NextImage
+              priority
+              layout="responsive"
+              placeholder="blur"
+              src={profileImageSrc}
+              alt="My Profile Image"
+            />
+          </Box>
+        </Grid>
+      </ScaleFade>
     </Box>
   )
 }
