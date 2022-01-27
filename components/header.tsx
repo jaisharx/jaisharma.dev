@@ -1,4 +1,5 @@
 import { Text, Box, Grid, HStack, Link, ScaleFade } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 import styled from '@emotion/styled'
 import NextImage from 'next/image'
 import Container from './container'
@@ -73,6 +74,8 @@ const FancyUnderline = styled(Link)`
   }
 `
 
+const MotionBox = motion(Box)
+
 function LeftColumn() {
   return (
     <Box as="main" color="white">
@@ -137,7 +140,16 @@ function LeftColumn() {
 export default function Header() {
   return (
     <Box as={Container} type="header">
-      <ScaleFade in={true}>
+      <MotionBox
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.2 }}
+        variants={{
+          visible: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+      >
         <Grid templateColumns={{ md: '1fr', lg: '1.4fr 1fr' }} mt={20}>
           <LeftColumn />
           <Box pos="relative" display={{ base: 'none', lg: 'block' }}>
@@ -150,7 +162,7 @@ export default function Header() {
             />
           </Box>
         </Grid>
-      </ScaleFade>
+      </MotionBox>
     </Box>
   )
 }
