@@ -106,16 +106,25 @@ export default function Card({
           hidden: { opacity: 0, scale: 0.9 },
         }}
       >
-        <Box borderRadius="md" overflow="hidden" mt={{ base: 4, lg: 12 }}>
-          <Link href={url} isExternal>
-            <NextImage
-              alt={title}
-              src={imgSrc}
-              layout="responsive"
-              placeholder="blur"
-            />
-          </Link>
-        </Box>
+        <MotionBox
+          borderRadius="md"
+          whileHover={{
+            scale: 1.05,
+            boxShadow: '0 0 20px white',
+            transition: { duration: 0.2 },
+          }}
+        >
+          <Box borderRadius="md" overflow="hidden" mt={{ base: 4, lg: 12 }}>
+            <Link href={url} isExternal>
+              <NextImage
+                alt={title}
+                src={imgSrc}
+                layout="responsive"
+                placeholder="blur"
+              />
+            </Link>
+          </Box>
+        </MotionBox>
       </MotionBox>
     </Box>
   )
