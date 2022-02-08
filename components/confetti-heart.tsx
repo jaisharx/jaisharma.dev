@@ -19,7 +19,7 @@ export default function ConfettiHeart() {
       >
         ❤️
       </Box>
-      {onHover && <Confetti />}
+      <Confetti recycle={onHover} />
     </>
   )
 }
