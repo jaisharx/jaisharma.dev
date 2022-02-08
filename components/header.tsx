@@ -10,6 +10,7 @@ import DevToIcon from './icons/devto-icon'
 import MediumIcon from './icons/medium-icon'
 
 import profileImageSrc from 'public/static/profile.jpg'
+import ConfettiHeart from './confetti-heart'
 
 const SocialLink = styled(Link)`
   display: flex;
@@ -100,8 +101,8 @@ function LeftColumn() {
         I’m a Software Developer based in New Delhi, India. I specialize in
         creating high quality{' '}
         <FancyUnderline href="#website">websites</FancyUnderline> &{' '}
-        <FancyUnderline href="#webapp">webapps</FancyUnderline> made with ❤ of
-        modern web technologies.
+        <FancyUnderline href="#webapp">webapps</FancyUnderline> made with{' '}
+        <ConfettiHeart /> of modern web technologies.
       </Text>
       <HStack spacing={{ base: 5, lg: 9 }} mt={10}>
         <SocialLink
