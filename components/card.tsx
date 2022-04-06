@@ -27,7 +27,7 @@ type CardProps = {
   id?: string
   count: string
   title: string
-  imgSrc: StaticImageData
+  imgSrc: any
   url: string
   badgeText?: string
   isWork?: boolean
