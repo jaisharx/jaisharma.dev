@@ -1,4 +1,4 @@
-import { Text, Box, Grid, HStack, Link, ScaleFade } from '@chakra-ui/react'
+import { Text, Box, Grid, HStack, Link } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import styled from '@emotion/styled'
 import NextImage from 'next/image'
