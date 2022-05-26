@@ -9,7 +9,7 @@
     "lint": "next lint",
     "prepare": "husky install",
     "clean": "shx rm -rf .next .vercel",
-    "format": "prettier --write ./**/*.{ts,tsx}"
+    "format": "prettier --ignore-path .gitignore --write ."
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.10",
