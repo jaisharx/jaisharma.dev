@@ -1,4 +1,4 @@
-export default function devtoIcon(props) {
+export default function devtoIcon() {
   return (
     <svg
       width="45"
