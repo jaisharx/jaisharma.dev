@@ -31,7 +31,9 @@ type CardProps = {
   url: string
   badgeText?: string
   isWork?: boolean
+  isDoc?: boolean
   githubUrl?: string
+  docUrl?: string
   children: ReactNode
 }
 
@@ -43,6 +45,8 @@ export default function Card({
   url,
   badgeText,
   isWork,
+  isDoc,
+  docUrl,
   githubUrl,
   children,
 }: CardProps) {
@@ -82,6 +86,14 @@ export default function Card({
           {children}
         </Text>
         <HStack mt={12}>
+          {!isWork && isDoc && (
+            <>
+              <CustomLink href={docUrl} isExternal>
+                Docs
+              </CustomLink>
+              <BulletDot>•</BulletDot>
+            </>
+          )}
           <CustomLink href={url} isExternal>
             Live Url
           </CustomLink>

@@ -11,10 +11,12 @@ export default function Projects() {
   return (
     <Box as={Container} type="section">
       <Card
+        isDoc
         count="01"
         title="Next Zero Intl"
         imgSrc={nextZeroIntlSrc}
-        url="https://next-zero-intl-docs.vercel.app/"
+        docUrl="https://next-zero-intl-docs.vercel.app/"
+        url="https://next-zero-intl-demo.vercel.app/"
         githubUrl="https://github.com/jaisharx/next-zero-intl"
       >
         Next Zero Intl is a NPM package that does automatic translations to more
