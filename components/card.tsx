@@ -1,4 +1,4 @@
-import { Box, Text, Heading, HStack, Link, Badge } from '@chakra-ui/react'
+import { Box, Text, Heading, HStack, Link, Badge, Wrap } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 
@@ -65,7 +65,7 @@ export default function Card({
         <Text fontSize={{ base: '5xl', lg: '8xl' }} fontFamily="Monoton">
           {isWork ? 'Work' : 'Project'} {count}
         </Text>
-        <HStack mt={2}>
+        <Wrap mt={2} align="center">
           <Heading
             fontSize={{ base: 'lg', md: '3xl' }}
             textTransform="uppercase"
@@ -77,7 +77,7 @@ export default function Card({
               {badgeText}
             </Badge>
           )}
-        </HStack>
+        </Wrap>
         <Text
           mt={6}
           fontSize={{ base: 'lg', lg: '3xl' }}
