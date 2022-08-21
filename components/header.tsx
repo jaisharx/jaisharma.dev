@@ -9,7 +9,7 @@ import GithubIcon from './icons/github-icon'
 import DevToIcon from './icons/devto-icon'
 import MediumIcon from './icons/medium-icon'
 
-import profileImageSrc from 'public/static/profile.jpg'
+import profileImageSrc from 'public/static/profile.webp'
 
 const SocialLink = styled(Link)`
   display: flex;
