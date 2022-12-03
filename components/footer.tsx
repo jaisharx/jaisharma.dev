@@ -1,4 +1,5 @@
-import { Box, Link, Heading, useClipboard, useToast } from '@chakra-ui/react'
+import { Link, Heading, useClipboard, useToast } from '@chakra-ui/react'
+import { MotionBox } from './motion'
 import Container from './container'
 import FleckedBox from './flecked-box'
 
@@ -20,23 +21,30 @@ export default function Footer() {
 
   return (
     <FleckedBox>
-      <Box as={Container} type="footer" py={{ base: 20, md: 80 }}>
-        <Heading
-          color="white"
-          fontSize={{ base: '26px', md: '62px', lg: '92px' }}
-          textShadow={{ base: 'none', md: DepthShadow }}
+      <Container type="footer">
+        <MotionBox
+          py={{ base: 20, md: 80 }}
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
         >
-          Like what you see? <br /> Reach out to me at <br />
-          <Link
-            onClick={copyEmailToClipboard}
-            transition=".2s all ease"
-            _focus={{ boxShadow: 'none' }}
-            _hover={{ borderBottom: '12px solid #2DFFC0' }}
+          <Heading
+            color="white"
+            fontSize={{ base: '26px', md: '62px', lg: '92px' }}
+            textShadow={{ base: 'none', md: DepthShadow }}
           >
-            sendtojsharma@gmail.com
-          </Link>
-        </Heading>
-      </Box>
+            Like what you see? <br /> Reach out to me at <br />
+            <Link
+              onClick={copyEmailToClipboard}
+              transition=".2s all ease"
+              _focus={{ boxShadow: 'none' }}
+              _hover={{ borderBottom: '12px solid #2DFFC0' }}
+            >
+              sendtojsharma@gmail.com
+            </Link>
+          </Heading>
+        </MotionBox>
+      </Container>
     </FleckedBox>
   )
 }
