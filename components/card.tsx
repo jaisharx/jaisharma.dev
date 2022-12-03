@@ -1,6 +1,13 @@
 import { Box, Text, Heading, HStack, Link, Badge, Wrap } from '@chakra-ui/react'
 import { ReactNode } from 'react'
-import { motion } from 'framer-motion'
+import {
+  MotionBox,
+  MotionHeading,
+  MotionHStack,
+  MotionText,
+  MotionWrap,
+} from './motion'
+import { Variants } from 'framer-motion'
 
 import NextImage from 'next/image'
 import styled from '@emotion/styled'
@@ -21,7 +28,6 @@ const BulletDot = styled(Text)`
   font-weight: 500;
   color: #2dffc0;
 `
-const MotionBox = motion(Box)
 
 type CardProps = {
   id?: string
@@ -35,6 +41,22 @@ type CardProps = {
   githubUrl?: string
   docUrl?: string
   children: ReactNode
+}
+
+const CardVariants: Variants = {
+  hidden: { y: 100, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
+
+const CardTextVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1 },
 }
 
 export default function Card({
@@ -51,21 +73,25 @@ export default function Card({
   children,
 }: CardProps) {
   return (
-    <Box id={id} mt={28} color="white" as="article">
-      <MotionBox
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.2 }}
-        variants={{
-          visible: { opacity: 1 },
-          hidden: { opacity: 0 },
-        }}
-      >
-        <Text fontSize={{ base: '5xl', lg: '8xl' }} fontFamily="Monoton">
+    <MotionBox
+      id={id}
+      mt={28}
+      color="white"
+      as="article"
+      initial="hidden"
+      whileInView="visible"
+      variants={CardVariants}
+      viewport={{ once: true, amount: 0.1 }}
+    >
+      <Box>
+        <MotionText
+          fontFamily="Monoton"
+          variants={CardTextVariants}
+          fontSize={{ base: '5xl', lg: '8xl' }}
+        >
           {isWork ? 'Work' : 'Project'} {count}
-        </Text>
-        <Wrap mt={2} align="center">
+        </MotionText>
+        <MotionWrap mt={2} variants={CardTextVariants} align="center">
           <Heading
             fontSize={{ base: 'lg', md: '3xl' }}
             textTransform="uppercase"
@@ -77,15 +103,16 @@ export default function Card({
               {badgeText}
             </Badge>
           )}
-        </Wrap>
-        <Text
+        </MotionWrap>
+        <MotionText
           mt={6}
+          variants={CardTextVariants}
           fontSize={{ base: 'lg', lg: '3xl' }}
           maxW={{ base: '100%', lg: '70%' }}
         >
           {children}
-        </Text>
-        <HStack mt={12}>
+        </MotionText>
+        <MotionHStack mt={12} variants={CardTextVariants}>
           {!isWork && isDoc && (
             <>
               <CustomLink href={docUrl} isExternal>
@@ -105,23 +132,13 @@ export default function Card({
               </CustomLink>
             </>
           )}
-        </HStack>
-      </MotionBox>
+        </MotionHStack>
+      </Box>
 
-      <MotionBox
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.2 }}
-        variants={{
-          visible: { opacity: 1, scale: 1 },
-          hidden: { opacity: 0, scale: 0.9 },
-        }}
-      >
+      <Box>
         <MotionBox
           borderRadius="md"
           whileHover={{
-            scale: 1.05,
             boxShadow: '0 0 20px white',
             transition: { duration: 0.2 },
           }}
@@ -137,7 +154,7 @@ export default function Card({
             </Link>
           </Box>
         </MotionBox>
-      </MotionBox>
-    </Box>
+      </Box>
+    </MotionBox>
   )
 }
