@@ -1,5 +1,7 @@
-import { Text, Box, Grid, HStack, Link } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
+import { Box, Grid, Link } from '@chakra-ui/react'
+import { MotionBox, MotionHStack, MotionText } from './motion'
+import { Variants } from 'framer-motion'
+
 import styled from '@emotion/styled'
 import NextImage from 'next/image'
 import Container from './container'
@@ -74,26 +76,50 @@ const FancyUnderline = styled(Link)`
   }
 `
 
-const MotionBox = motion(Box)
+const HeaderTextVarients: Variants = {
+  hidden: {
+    y: 40,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
 
 function LeftColumn() {
   return (
-    <Box as="main" color="white">
-      <Text fontSize="4xl" lineHeight="1">
+    <MotionBox
+      as="main"
+      color="white"
+      initial="hidden"
+      animate="animate"
+      variants={HeaderTextVarients}
+    >
+      <MotionText variants={HeaderTextVarients} fontSize="4xl" lineHeight="1">
         JS
-      </Text>
-      <Text
-        fontSize={{ base: '2xl', lg: '4xl' }}
+      </MotionText>
+      <MotionText
         fontWeight="light"
         mt={{ base: 24, lg: 28 }}
+        variants={HeaderTextVarients}
+        fontSize={{ base: '2xl', lg: '4xl' }}
       >
         Hi, there ✋
-      </Text>
-      <Text fontSize={{ base: '4xl', lg: '5xl' }} mt={4}>
+      </MotionText>
+      <MotionText
+        mt={4}
+        variants={HeaderTextVarients}
+        fontSize={{ base: '4xl', lg: '5xl' }}
+      >
         I’m Jai Sharma.
-      </Text>
-      <Text
+      </MotionText>
+      <MotionText
         mt={6}
+        variants={HeaderTextVarients}
         fontSize={{ base: 'medium', md: 'large' }}
         maxW={{ base: '98%', lg: '85%' }}
       >
@@ -102,8 +128,12 @@ function LeftColumn() {
         <FancyUnderline href="#website">websites</FancyUnderline> &{' '}
         <FancyUnderline href="#webapp">webapps</FancyUnderline> made with ❤️ of
         modern web technologies.
-      </Text>
-      <HStack spacing={{ base: 5, lg: 9 }} mt={10}>
+      </MotionText>
+      <MotionHStack
+        mt={10}
+        spacing={{ base: 5, lg: 9 }}
+        variants={HeaderTextVarients}
+      >
         <SocialLink
           isExternal
           aria-label="Gmail"
@@ -132,37 +162,36 @@ function LeftColumn() {
         >
           <MediumIcon />
         </SocialLink>
-      </HStack>
-    </Box>
+      </MotionHStack>
+    </MotionBox>
   )
 }
 
 export default function Header() {
   return (
     <Box as={Container} type="header">
-      <MotionBox
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.2 }}
-        variants={{
-          visible: { opacity: 1 },
-          hidden: { opacity: 0 },
-        }}
-      >
-        <Grid templateColumns={{ md: '1fr', lg: '1.4fr 1fr' }} mt={20}>
-          <LeftColumn />
-          <Box pos="relative" display={{ base: 'none', lg: 'block' }}>
-            <NextImage
-              priority
-              layout="responsive"
-              placeholder="blur"
-              src={profileImageSrc}
-              alt="My Profile Image"
-            />
-          </Box>
-        </Grid>
-      </MotionBox>
+      <Grid templateColumns={{ md: '1fr', lg: '1.4fr 1fr' }} mt={20}>
+        <LeftColumn />
+        <MotionBox
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: {
+              delay: 0.8,
+            },
+          }}
+          pos="relative"
+          display={{ base: 'none', lg: 'block' }}
+        >
+          <NextImage
+            priority
+            layout="responsive"
+            placeholder="blur"
+            src={profileImageSrc}
+            alt="My Profile Image"
+          />
+        </MotionBox>
+      </Grid>
     </Box>
   )
 }
