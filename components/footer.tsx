@@ -1,9 +1,17 @@
-import { Link, Heading, useClipboard, useToast } from '@chakra-ui/react'
+import {
+  Link,
+  Heading,
+  useClipboard,
+  useToast,
+  useMediaQuery,
+} from '@chakra-ui/react'
 import { MotionBox } from './motion'
 import Container from './container'
 import FleckedBox from './flecked-box'
 
 export default function Footer() {
+  const [isMobile] = useMediaQuery('(max-width: 62em)')
+
   const DepthShadow =
     '1px 1px 0px #161919, 2px 2px 0px #161919, 3px 3px 0px #161919, 4px 4px 0px #161919, 5px 5px 0px #161919, 6px 6px 0px #161919, 7px 7px 0px #161919, 8px 8px 0px #161919, 9px 9px 0px #161919, 10px 10px 0px #161919, 11px 11px 0px #161919, 12px 12px 0px #161919;'
 
@@ -26,7 +34,7 @@ export default function Footer() {
           py={{ base: 20, md: 80 }}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: isMobile ? 0 : 0.5 }}
         >
           <Heading
             color="white"
