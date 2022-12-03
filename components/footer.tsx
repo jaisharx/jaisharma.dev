@@ -26,7 +26,7 @@ export default function Footer() {
           py={{ base: 20, md: 80 }}
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <Heading
             color="white"

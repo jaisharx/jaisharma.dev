@@ -1,12 +1,6 @@
-import { Box, Text, Heading, HStack, Link, Badge, Wrap } from '@chakra-ui/react'
+import { Box, Text, Heading, Link, Badge, Wrap, HStack } from '@chakra-ui/react'
+import { MotionBox } from './motion'
 import { ReactNode } from 'react'
-import {
-  MotionBox,
-  MotionHeading,
-  MotionHStack,
-  MotionText,
-  MotionWrap,
-} from './motion'
 import { Variants } from 'framer-motion'
 
 import NextImage from 'next/image'
@@ -44,19 +38,11 @@ type CardProps = {
 }
 
 const CardVariants: Variants = {
-  hidden: { y: 100, opacity: 0 },
+  hidden: { y: 200, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
   },
-}
-
-const CardTextVariants: Variants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
 }
 
 export default function Card({
@@ -84,14 +70,10 @@ export default function Card({
       viewport={{ once: true, amount: 0.1 }}
     >
       <Box>
-        <MotionText
-          fontFamily="Monoton"
-          variants={CardTextVariants}
-          fontSize={{ base: '5xl', lg: '8xl' }}
-        >
+        <Text fontFamily="Monoton" fontSize={{ base: '5xl', lg: '8xl' }}>
           {isWork ? 'Work' : 'Project'} {count}
-        </MotionText>
-        <MotionWrap mt={2} variants={CardTextVariants} align="center">
+        </Text>
+        <Wrap mt={2} align="center">
           <Heading
             fontSize={{ base: 'lg', md: '3xl' }}
             textTransform="uppercase"
@@ -103,16 +85,15 @@ export default function Card({
               {badgeText}
             </Badge>
           )}
-        </MotionWrap>
-        <MotionText
+        </Wrap>
+        <Text
           mt={6}
-          variants={CardTextVariants}
           fontSize={{ base: 'lg', lg: '3xl' }}
           maxW={{ base: '100%', lg: '70%' }}
         >
           {children}
-        </MotionText>
-        <MotionHStack mt={12} variants={CardTextVariants}>
+        </Text>
+        <HStack mt={12}>
           {!isWork && isDoc && (
             <>
               <CustomLink href={docUrl} isExternal>
@@ -132,7 +113,7 @@ export default function Card({
               </CustomLink>
             </>
           )}
-        </MotionHStack>
+        </HStack>
       </Box>
 
       <Box>
