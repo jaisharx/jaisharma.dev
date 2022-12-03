@@ -32,8 +32,8 @@ export default function Footer() {
       <Container type="footer">
         <MotionBox
           py={{ base: 20, md: 80 }}
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: isMobile ? 0 : 0.5 }}
         >
           <Heading
