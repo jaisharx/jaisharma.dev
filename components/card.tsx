@@ -38,9 +38,8 @@ type CardProps = {
 }
 
 const CardVariants: Variants = {
-  hidden: { y: 200, opacity: 0 },
+  hidden: { opacity: 0 },
   visible: {
-    y: 0,
     opacity: 1,
   },
 }
@@ -67,7 +66,7 @@ export default function Card({
       initial="hidden"
       whileInView="visible"
       variants={CardVariants}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true }}
     >
       <Box>
         <Text fontFamily="Monoton" fontSize={{ base: '5xl', lg: '8xl' }}>
