@@ -12,7 +12,7 @@ export default function Works() {
         isWork
         count="01"
         title="tryp.com"
-        badgeText="Working Since Sep, 2021"
+        badgeText="Ongoing (1+ year)"
         imgSrc={trypImageSrc}
         url="https://www.tryp.com/"
       >
@@ -23,7 +23,7 @@ export default function Works() {
         isWork
         count="02"
         title="Open source projects"
-        badgeText="Worked on Summer, 2021"
+        badgeText="Summer, 2021"
         imgSrc={yellowjobsImageSrc}
         url="https://yellowjobs.org/"
       >
