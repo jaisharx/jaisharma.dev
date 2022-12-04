@@ -29,7 +29,7 @@ export default function MovingCircle() {
       zIndex="-1"
       pos="absolute"
       className="box"
-      initial={{ x: -18, y: -30 }}
+      initial={{ x: -20, y: -30 }}
       animate={{
         x,
         y,
