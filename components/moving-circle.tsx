@@ -26,6 +26,7 @@ export default function MovingCircle() {
   return (
     <MotionBox
       ref={ref}
+      zIndex="-1"
       pos="absolute"
       className="box"
       initial={{ x: -18, y: -30 }}
