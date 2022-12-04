@@ -1,10 +1,11 @@
-import { Box, Grid, Link } from '@chakra-ui/react'
+import { Box, Grid, Link, useMediaQuery } from '@chakra-ui/react'
 import { MotionBox, MotionHStack, MotionText } from './motion'
 import { Variants } from 'framer-motion'
 
 import styled from '@emotion/styled'
 import NextImage from 'next/image'
 import Container from './container'
+import MovingCircle from './moving-circle'
 
 import GmailIcon from './icons/gmail-icon'
 import GithubIcon from './icons/github-icon'
@@ -168,8 +169,11 @@ function LeftColumn() {
 }
 
 export default function Header() {
+  const [isDesktop] = useMediaQuery('(min-width: 62em)')
+
   return (
     <Box as={Container} type="header">
+      {isDesktop && <MovingCircle />}
       <Grid templateColumns={{ md: '1fr', lg: '1.4fr 1fr' }} mt={20}>
         <LeftColumn />
         <MotionBox
