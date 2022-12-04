@@ -4,7 +4,7 @@ import { Box } from '@chakra-ui/react'
 
 export default function MovingCircle() {
   const ref = useRef(null)
-  const [{ x, y }, setPoint] = useState({ x: -20, y: 60 })
+  const [{ x, y }, setPoint] = useState({ x: -18, y: 60 })
 
   useEffect(() => {
     if (!ref.current) return
@@ -14,6 +14,8 @@ export default function MovingCircle() {
 
       const x = clientX - element.offsetLeft - element.offsetWidth / 12
       const y = clientY - element.offsetTop - element.offsetHeight / 12
+
+      console.log(x, y)
 
       setPoint({ x, y })
     }
@@ -28,7 +30,7 @@ export default function MovingCircle() {
       ref={ref}
       pos="absolute"
       className="box"
-      initial={{ x: -20, y: -30 }}
+      initial={{ x: -18, y: -30 }}
       animate={{
         x,
         y,
