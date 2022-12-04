@@ -21,6 +21,7 @@ export default function Footer() {
   const copyEmailToClipboard = () => {
     onCopy() // copy the text
     toast({
+      containerStyle: { marginBottom: isMobile ? 2 : 12 },
       title: 'Email copied to the clipboard.',
       status: 'success',
       duration: 5000,
