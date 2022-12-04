@@ -15,8 +15,6 @@ export default function MovingCircle() {
       const x = clientX - element.offsetLeft - element.offsetWidth / 12
       const y = clientY - element.offsetTop - element.offsetHeight / 12
 
-      console.log(x, y)
-
       setPoint({ x, y })
     }
 
