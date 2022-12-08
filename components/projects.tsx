@@ -30,8 +30,8 @@ export default function Projects() {
         url="https://dev-to-pied.vercel.app/"
         githubUrl="https://github.com/jaisharx/dev.to"
       >
-        Dev.to clone built by me from scratch. It's using react.js & next.js as
-        its framework, and chakra UI for themeability.
+        An attempt to clone the dev.to homepage from scratch using react,
+        next.js and chakra UI pixel-perfect, and connected with real API.
       </Card>
       <Card
         id="website"
@@ -41,8 +41,8 @@ export default function Projects() {
         url="https://nextjs-org-website.vercel.app/"
         githubUrl="https://github.com/jaisharx/nextjs.org"
       >
-        This repo is a recreation of the modern & sleek-looking Next.js
-        homepage. I've tried to get this as pixel-perfect as possible.
+        Big fan of vercel's design system/choices, had to try to build a
+        pixel-perfect replica of their next.js homepage (using next.js).
       </Card>
       <Card
         count="04"
@@ -51,8 +51,8 @@ export default function Projects() {
         url="https://designwiz.vercel.app/"
         githubUrl="https://github.com/jaisharx/designwiz"
       >
-        Landing page of a modern-looking website re-built by me, scoring a
-        100/100 on a lighthouse audit (no kidding with performance).
+        Portfolio wouldn't be complete if there wasn't a project scoring a
+        100/100 on a lighthouse audit (test with chrome ext disabled).
       </Card>
     </Box>
   )
