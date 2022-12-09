@@ -30,8 +30,8 @@ export default function Projects() {
         url="https://dev-to-pied.vercel.app/"
         githubUrl="https://github.com/jaisharx/dev.to"
       >
-        An attempt to clone the dev.to homepage from scratch using react,
-        next.js and chakra UI pixel-perfect, and connected with real API.
+        An attempt to clone dev.to homepage from scratch using react, next.js
+        and chakra UI pixel-perfect, and connected with real API.
       </Card>
       <Card
         id="website"
@@ -52,7 +52,7 @@ export default function Projects() {
         githubUrl="https://github.com/jaisharx/designwiz"
       >
         Portfolio wouldn't be complete if there wasn't a project scoring a
-        100/100 on a lighthouse audit (test with chrome ext disabled).
+        100/100 on a lighthouse audit (test in incognito mode).
       </Card>
     </Box>
   )
