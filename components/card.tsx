@@ -125,12 +125,7 @@ export default function Card({
         >
           <Box borderRadius="md" overflow="hidden" mt={{ base: 4, lg: 12 }}>
             <Link href={url} isExternal>
-              <NextImage
-                alt={title}
-                src={imgSrc}
-                layout="responsive"
-                placeholder="blur"
-              />
+              <NextImage alt={title} src={imgSrc} />
             </Link>
           </Box>
         </MotionBox>

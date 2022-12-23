@@ -192,11 +192,9 @@ export default function Header() {
         >
           <NextImage
             priority
-            layout="fill"
-            objectFit="cover"
-            placeholder="blur"
             src={profileImageSrc}
             alt="My Profile Image"
+            style={{ height: '100%', objectFit: 'cover' }}
           />
         </MotionBox>
       </Grid>
