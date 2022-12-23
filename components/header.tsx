@@ -12,7 +12,7 @@ import GithubIcon from './icons/github-icon'
 import DevToIcon from './icons/devto-icon'
 import MediumIcon from './icons/medium-icon'
 
-import profileImageSrc from 'public/static/profile.webp'
+import profileImageSrc from 'public/static/profile.jpg'
 
 const SocialLink = styled(Link)`
   display: flex;
@@ -184,12 +184,16 @@ export default function Header() {
               delay: 0.8,
             },
           }}
+          h="45rem"
           pos="relative"
+          borderRadius="md"
+          overflow="hidden"
           display={{ base: 'none', lg: 'block' }}
         >
           <NextImage
             priority
-            layout="responsive"
+            layout="fill"
+            objectFit="cover"
             placeholder="blur"
             src={profileImageSrc}
             alt="My Profile Image"
