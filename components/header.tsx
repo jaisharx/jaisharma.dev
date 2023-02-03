@@ -9,8 +9,7 @@ import MovingCircle from './moving-circle'
 
 import GmailIcon from './icons/gmail-icon'
 import GithubIcon from './icons/github-icon'
-import DevToIcon from './icons/devto-icon'
-import MediumIcon from './icons/medium-icon'
+import LinkedInIcon from './icons/linkedin-icon'
 
 import profileImageSrc from 'public/static/profile.jpg'
 
@@ -151,17 +150,10 @@ function LeftColumn() {
         </SocialLink>
         <SocialLink
           isExternal
-          aria-label="Dev.to"
-          href="https://dev.to/jaisharx"
+          aria-label="Linkedin"
+          href="https://www.linkedin.com/in/sendtojsharma/"
         >
-          <DevToIcon />
-        </SocialLink>
-        <SocialLink
-          isExternal
-          aria-label="Medium"
-          href="https://medium.com/@jaisharx"
-        >
-          <MediumIcon />
+          <LinkedInIcon />
         </SocialLink>
       </MotionHStack>
     </MotionBox>
