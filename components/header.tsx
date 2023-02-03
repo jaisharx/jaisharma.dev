@@ -5,6 +5,7 @@ import { Variants } from 'framer-motion'
 import styled from '@emotion/styled'
 import NextImage from 'next/image'
 import Container from './container'
+import SocialLink from './social-link'
 import MovingCircle from './moving-circle'
 
 import GmailIcon from './icons/gmail-icon'
@@ -12,41 +13,6 @@ import GithubIcon from './icons/github-icon'
 import LinkedInIcon from './icons/linkedin-icon'
 
 import profileImageSrc from 'public/static/profile.jpg'
-
-const SocialLink = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 54px;
-  height: 54px;
-  border: 1px solid white;
-  border-radius: 100%;
-
-  svg {
-    transform: scale(0.72);
-  }
-
-  @media (min-width: 48em) {
-    width: 64px;
-    height: 64px;
-
-    svg {
-      transform: scale(1);
-    }
-  }
-
-  &:hover,
-  &:active {
-    background-color: white;
-    svg {
-      fill: black;
-    }
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 3px #2dffc0;
-  }
-`
 
 const FancyUnderline = styled(Link)`
   position: relative;
@@ -136,6 +102,7 @@ function LeftColumn() {
       >
         <SocialLink
           isExternal
+          socialType="email"
           aria-label="Gmail"
           href="mailto:sendtojsharma@gmail.com"
         >
