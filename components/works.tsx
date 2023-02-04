@@ -12,7 +12,7 @@ export default function Works() {
         isWork
         count="01"
         title="tryp.com"
-        badgeText="Ongoing (1+ year)"
+        badgeText="Ongoing (1.5+ year)"
         imgSrc={trypImageSrc}
         url="https://www.tryp.com/"
       >
