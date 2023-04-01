@@ -89,7 +89,7 @@ function LeftColumn() {
         fontSize={{ base: 'medium', md: 'large' }}
         maxW={{ base: '98%', lg: '85%' }}
       >
-        I’m a Software Developer based in New Delhi, India. I specialize in
+        I’m a Software Developer based in Bengaluru, India. I specialize in
         creating high quality{' '}
         <FancyUnderline href="#website">websites</FancyUnderline> &{' '}
         <FancyUnderline href="#webapp">webapps</FancyUnderline> made with ❤️ of
