@@ -1,21 +1,20 @@
+'use client'
+
 import { ChakraProvider } from '@chakra-ui/react'
-import type { AppProps } from 'next/app'
 
 import NextHead from 'components/next-head'
 import GloablCSS from 'styles/globals'
 import Analytics from 'components/analytics'
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function AppProviders({ children }) {
   return (
     <>
       <NextHead />
       <ChakraProvider>
         <GloablCSS />
         <Analytics />
-        <Component {...pageProps} />
+        {children}
       </ChakraProvider>
     </>
   )
 }
-
-export default MyApp
