@@ -3,7 +3,7 @@ import { MotionBox } from './motion'
 import { Box } from '@chakra-ui/react'
 
 export default function MovingCircle() {
-  const ref = useRef(null)
+  const ref = useRef<HTMLElement>(null)
   const [{ x, y }, setPoint] = useState({ x: -18, y: 60 })
 
   useEffect(() => {
