@@ -2,14 +2,12 @@
 
 import { ChakraProvider } from '@chakra-ui/react'
 
-import NextHead from 'components/next-head'
 import GloablCSS from 'styles/globals'
 import Analytics from 'components/analytics'
 
-export default function AppProviders({ children }) {
+export default function ClientProviders({ children }) {
   return (
     <>
-      <NextHead />
       <ChakraProvider>
         <GloablCSS />
         <Analytics />
