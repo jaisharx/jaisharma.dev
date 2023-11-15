@@ -131,7 +131,7 @@ export default function Header() {
   const [isDesktop] = useMediaQuery('(min-width: 62em)')
 
   return (
-    <Box as={Container} type="header">
+    <Box pos="relative" as={Container} type="header">
       {isDesktop && <MovingCircle />}
       <Grid templateColumns={{ md: '1fr', lg: '1.4fr 1fr' }} mt={20}>
         <LeftColumn />
@@ -143,11 +143,13 @@ export default function Header() {
               delay: 0.8,
             },
           }}
-          h="45rem"
-          pos="relative"
           borderRadius="md"
           overflow="hidden"
-          display={{ base: 'none', lg: 'block' }}
+          right={10}
+          top={10}
+          w={{ base: '10rem', lg: 'auto' }}
+          h={{ base: '12rem', lg: '45rem' }}
+          pos={{ base: 'absolute', lg: 'relative' }}
         >
           <NextImage
             priority
