@@ -145,8 +145,8 @@ export default function Header() {
           }}
           borderRadius="md"
           overflow="hidden"
-          right={10}
-          top={10}
+          right={{ base: 10, lg: 0 }}
+          top={{ base: 10, lg: 0 }}
           w={{ base: '10rem', lg: 'auto' }}
           h={{ base: '12rem', lg: '45rem' }}
           pos={{ base: 'absolute', lg: 'relative' }}
