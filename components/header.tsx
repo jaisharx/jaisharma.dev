@@ -143,13 +143,11 @@ export default function Header() {
               delay: 0.8,
             },
           }}
+          h="45rem"
+          pos="relative"
           borderRadius="md"
           overflow="hidden"
-          right={{ base: 10, lg: 0 }}
-          top={{ base: 10, lg: 0 }}
-          w={{ base: '10rem', lg: 'auto' }}
-          h={{ base: '12rem', lg: '45rem' }}
-          pos={{ base: 'absolute', lg: 'relative' }}
+          display={{ base: 'none', lg: 'block' }}
         >
           <NextImage
             priority
