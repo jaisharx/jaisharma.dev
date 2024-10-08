@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
+    "build": "next build",
     "lint": "next lint",
     "prepare": "husky install",
     "clean": "shx rm -rf .next .vercel",
