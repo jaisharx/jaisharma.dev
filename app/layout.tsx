@@ -1,4 +1,5 @@
-import ClientProviders from 'components/client-providers'
+import './global.css'
+import { ChakraProvider } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 
 import SEOData from 'seo.config.json'
@@ -17,7 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <ClientProviders>{children}</ClientProviders>
+        <ChakraProvider>{children}</ChakraProvider>
       </body>
     </html>
   )

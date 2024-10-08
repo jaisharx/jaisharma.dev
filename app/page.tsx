@@ -1,17 +1,11 @@
 'use client'
 
-import Footer from 'components/footer'
-import Header from 'components/header'
-import Works from 'components/works'
-import Projects from 'components/projects'
+import LoadingName from 'components/loading-name'
 
 export default function Homepage() {
   return (
     <>
-      <Header />
-      <Works />
-      <Projects />
-      <Footer />
+      <LoadingName />
     </>
   )
 }
